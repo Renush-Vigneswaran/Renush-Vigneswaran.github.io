@@ -1,0 +1,92 @@
+
+/* ===== GENERAL WEBSITE STYLING ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #29372D;
+    color: #EDE5D8;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== TOP NAVIGATION ===== */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 6%;
+}
+
+.about-link {
+    font-size: 16px;
+    color: #D6C5AC;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.intro p {
+    color: #C8B99F;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* ===== THREE MAIN OPTIONS ===== */
+
+.main-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 8% 8%;
+    text-align: center;
+}
+
+.main-navigation div {
+    font-size: clamp(16px, 2vw, 26px);
+    font-weight: 300;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #B9A68F;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 600px) {
+    .main-navigation {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 10%;
+    }
+
+    .intro p {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
